@@ -1,0 +1,997 @@
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  36
+On-line CPU(s) list:                     0-35
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) Gold 6154 CPU @ 3.00GHz
+CPU family:                              6
+Model:                                   85
+Thread(s) per core:                      1
+Core(s) per socket:                      18
+Socket(s):                               2
+Stepping:                                4
+CPU(s) scaling MHz:                      88%
+CPU max MHz:                             3700.0000
+CPU min MHz:                             1200.0000
+BogoMIPS:                                6000.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 pti intel_ppin ssbd mba ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d arch_capabilities
+L1d cache:                               1.1 MiB (36 instances)
+L1i cache:                               1.1 MiB (36 instances)
+L2 cache:                                36 MiB (36 instances)
+L3 cache:                                49.5 MiB (2 instances)
+NUMA node(s):                            2
+NUMA node0 CPU(s):                       0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34
+NUMA node1 CPU(s):                       1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35
+Vulnerability Gather data sampling:      Mitigation; Microcode
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             KVM: Mitigation: VMX unsupported
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Meltdown:                  Mitigation; PTI
+Vulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; IBRS; IBPB conditional; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsx async abort:           Mitigation; Clear CPU buffers; SMT disabled
+g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=0x0 p=0 b=0
+median=0.642924 average time=0.643019
+min=0.637978 max=0.651695
+rate=3.34018 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=0x0 p=0 b=0
+median=7.34979 average time=7.35104
+min=7.34478 max=7.35962
+rate=2.33746 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=0x0 p=0 b=16
+median=6.61733 average time=6.62972
+min=6.60489 max=6.67127
+rate=2.59619 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=0x0 p=0 b=32
+median=4.87071 average time=4.87069
+min=4.8641 max=4.87851
+rate=3.52718 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=0x0 p=0 b=64
+median=4.36325 average time=4.36522
+min=4.35357 max=4.37439
+rate=3.93741 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=0x0 p=0 b=128
+median=7.06279 average time=7.10593
+min=7.01157 max=7.25632
+rate=2.43245 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=0x0 p=0 b=256
+median=4.99837 average time=5.00597
+min=4.99256 max=5.0544
+rate=3.43709 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=1x1 p=1 b=0
+median=0.657751 average time=0.656145
+min=0.64301 max=0.6621
+rate=3.26489 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=2x1 p=2 b=0
+median=0.329884 average time=0.329872
+min=0.327156 max=0.331589
+rate=6.50981 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=4x1 p=4 b=0
+median=0.165827 average time=0.165697
+min=0.16445 max=0.166058
+rate=12.9502 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=8x1 p=8 b=0
+median=0.0828792 average time=0.082794
+min=0.0823323 max=0.0833162
+rate=25.911 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=12x1 p=12 b=0
+median=0.0573012 average time=0.0569035
+min=0.0553724 max=0.0580149
+rate=37.4771 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=18x1 p=18 b=0
+median=0.0466451 average time=0.0464524
+min=0.0456324 max=0.0469045
+rate=46.0388 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=36x1 p=36 b=0
+median=0.028982 average time=0.0288314
+min=0.0279937 max=0.0291143
+rate=74.0972 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=1x1 p=1 b=0
+median=7.03983 average time=7.03766
+min=6.97531 max=7.09652
+rate=2.44038 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=2x1 p=2 b=0
+median=3.95121 average time=3.95202
+min=3.93266 max=3.97495
+rate=4.348 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=4x1 p=4 b=0
+median=1.93586 average time=1.96146
+min=1.92162 max=2.15856
+rate=8.87452 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=8x1 p=8 b=0
+median=1.0998 average time=1.10041
+min=1.09505 max=1.10838
+rate=15.6209 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=12x1 p=12 b=0
+median=0.769814 average time=0.769863
+min=0.764596 max=0.773753
+rate=22.3169 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=18x1 p=18 b=0
+median=0.567536 average time=0.567937
+min=0.559448 max=0.576313
+rate=30.271 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=36x1 p=36 b=0
+median=0.417274 average time=0.420335
+min=0.372568 max=0.492132
+rate=41.1717 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=1x2 p=2 b=64
+median=0.265954 average time=0.266101
+min=0.265559 max=0.266716
+rate=8.07463 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=2x2 p=4 b=64
+median=0.133418 average time=0.133579
+min=0.133018 max=0.134685
+rate=16.0959 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=2x4 p=8 b=64
+median=0.0670238 average time=0.067017
+min=0.066547 max=0.0675194
+rate=32.0406 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=3x4 p=12 b=64
+median=0.0454098 average time=0.0454382
+min=0.0452111 max=0.0459062
+rate=47.2912 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=3x6 p=18 b=64
+median=0.0333155 average time=0.0333112
+min=0.0331391 max=0.033484
+rate=64.4591 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=6x6 p=36 b=64
+median=0.0181295 average time=0.0181001
+min=0.0177675 max=0.0183073
+rate=118.452 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=1x2 p=2 b=64
+median=2.19223 average time=2.19255
+min=2.18872 max=2.19826
+rate=7.83671 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=2x2 p=4 b=64
+median=1.09099 average time=1.09174
+min=1.08865 max=1.09566
+rate=15.7471 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=2x4 p=8 b=64
+median=0.548106 average time=0.548541
+min=0.546836 max=0.550698
+rate=31.344 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=3x4 p=12 b=64
+median=0.36648 average time=0.366872
+min=0.365621 max=0.368837
+rate=46.878 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=3x6 p=18 b=64
+median=0.25506 average time=0.258248
+min=0.251109 max=0.266195
+rate=67.3562 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=6x6 p=36 b=64
+median=0.170619 average time=0.168818
+min=0.15228 max=0.181768
+rate=100.691 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=1x36 p=36 b=64
+median=0.219017 average time=0.234737
+min=0.206744 max=0.316234
+rate=78.4407 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1000 K=1024 N=1536
+grid=6x6 p=36 b=64
+median=0.0236045 average time=0.0236113
+min=0.0234597 max=0.0238862
+rate=133.268 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=0x0 p=0 b=0
+median=0.638568 average time=0.638746
+min=0.634231 max=0.644397
+rate=3.36297 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=0x0 p=0 b=64
+median=0.62469 average time=0.624847
+min=0.624298 max=0.625619
+rate=3.43768 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=0x0 p=0 b=0
+median=7.25192 average time=7.21969
+min=7.16075 max=7.25855
+rate=2.36901 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=0x0 p=0 b=64
+median=5.15193 average time=5.15039
+min=5.14286 max=5.16027
+rate=3.33465 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=1x1 p=1 b=0
+median=0.644645 average time=0.643721
+min=0.626882 max=0.657101
+rate=3.33126 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=2x1 p=2 b=0
+median=0.328313 average time=0.327893
+min=0.322567 max=0.332681
+rate=6.54096 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=4x1 p=4 b=0
+median=0.165952 average time=0.165721
+min=0.16151 max=0.167
+rate=12.9404 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=8x1 p=8 b=0
+median=0.0833928 average time=0.0833679
+min=0.0831283 max=0.0835291
+rate=25.7514 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=12x1 p=12 b=0
+median=0.0558863 average time=0.0559849
+min=0.0553585 max=0.0567646
+rate=38.4259 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=18x1 p=18 b=0
+median=0.0468138 average time=0.0466215
+min=0.0452245 max=0.0469446
+rate=45.8729 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=36x1 p=36 b=0
+median=0.0280652 average time=0.0279203
+min=0.0272974 max=0.0284683
+rate=76.5178 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=1x1 p=1 b=0
+median=7.10105 average time=7.10007
+min=7.07845 max=7.12033
+rate=2.41934 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=2x1 p=2 b=0
+median=3.7706 average time=3.77087
+min=3.73585 max=3.81097
+rate=4.55627 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=4x1 p=4 b=0
+median=2.09528 average time=2.07871
+min=2.02013 max=2.10956
+rate=8.19931 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=8x1 p=8 b=0
+median=1.13114 average time=1.12911
+min=1.09384 max=1.14608
+rate=15.1881 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=12x1 p=12 b=0
+median=0.768447 average time=0.773834
+min=0.759701 max=0.79157
+rate=22.3566 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=18x1 p=18 b=0
+median=0.546258 average time=0.546267
+min=0.539844 max=0.558173
+rate=31.4501 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=36x1 p=36 b=0
+median=0.398394 average time=0.398823
+min=0.391615 max=0.407666
+rate=43.1228 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=1x2 p=2 b=64
+median=0.314109 average time=0.314274
+min=0.313477 max=0.315334
+rate=6.83674 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=2x2 p=4 b=64
+median=0.156932 average time=0.157106
+min=0.156756 max=0.158713
+rate=13.6842 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=2x4 p=8 b=64
+median=0.0788314 average time=0.0788644
+min=0.0786878 max=0.0791618
+rate=27.2415 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=3x4 p=12 b=64
+median=0.0531426 average time=0.0530678
+min=0.0527612 max=0.0532434
+rate=40.4098 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=3x6 p=18 b=64
+median=0.0378288 average time=0.0378373
+min=0.0376683 max=0.0381102
+rate=56.7685 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=6x6 p=36 b=64
+median=0.019897 average time=0.0199251
+min=0.0198827 max=0.020065
+rate=107.93 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=1x2 p=2 b=64
+median=2.62161 average time=2.61844
+min=2.59823 max=2.62497
+rate=6.55319 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=2x2 p=4 b=64
+median=1.30788 average time=1.30668
+min=1.30317 max=1.30995
+rate=13.1357 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=2x4 p=8 b=64
+median=0.65256 average time=0.652862
+min=0.651545 max=0.656904
+rate=26.3269 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=3x4 p=12 b=64
+median=0.435925 average time=0.436651
+min=0.435156 max=0.441583
+rate=39.4101 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=3x6 p=18 b=64
+median=0.292961 average time=0.29306
+min=0.291947 max=0.293957
+rate=58.6422 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=6x6 p=36 b=64
+median=0.152996 average time=0.153406
+min=0.152848 max=0.155795
+rate=112.29 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=1x36 p=36 b=64
+median=0.233145 average time=0.233766
+min=0.232008 max=0.236665
+rate=73.6874 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1000 K=1024 N=1536
+grid=6x6 p=36 b=64
+median=0.0271515 average time=0.0272169
+min=0.0268962 max=0.0277537
+rate=115.858 GFLOP/s
+---------------------------------------------------
+[iazarsky@gal-i9 a2_iazarsky]$ cat slurm-25481.out
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=1x1 p=1 b=64
+median=0.528186 average time=0.528049
+min=0.527057 max=0.528956
+rate=4.06577 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=2x1 p=2 b=64
+median=0.265998 average time=0.266028
+min=0.265327 max=0.267279
+rate=8.07329 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=4x1 p=4 b=64
+median=0.133601 average time=0.133568
+min=0.132872 max=0.134375
+rate=16.0738 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=8x1 p=8 b=64
+median=0.0671212 average time=0.0671281
+min=0.0668545 max=0.067647
+rate=31.9941 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=12x1 p=12 b=64
+median=0.0474113 average time=0.0473929
+min=0.0465673 max=0.0481514
+rate=45.2948 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=18x1 p=18 b=64
+median=0.0386335 average time=0.0386638
+min=0.0383953 max=0.0393429
+rate=55.586 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=36x1 p=36 b=64
+median=0.0247197 average time=0.0247266
+min=0.0245915 max=0.0249673
+rate=86.8733 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=1x1 p=1 b=64
+median=4.36526 average time=4.36538
+min=4.35881 max=4.37274
+rate=3.93559 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=2x1 p=2 b=64
+median=2.15286 average time=2.15358
+min=2.15137 max=2.15701
+rate=7.98002 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=4x1 p=4 b=64
+median=1.08337 average time=1.0837
+min=1.08166 max=1.08593
+rate=15.8578 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=8x1 p=8 b=64
+median=0.542168 average time=0.542532
+min=0.541298 max=0.545057
+rate=31.6873 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=12x1 p=12 b=64
+median=0.383682 average time=0.383696
+min=0.382793 max=0.384549
+rate=44.7763 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=18x1 p=18 b=64
+median=0.281169 average time=0.281836
+min=0.280459 max=0.285441
+rate=61.1016 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=36x1 p=36 b=64
+median=0.260531 average time=0.251955
+min=0.208039 max=0.291328
+rate=65.9418 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=1x1 p=1 b=64
+median=0.62533 average time=0.625202
+min=0.62361 max=0.62615
+rate=3.43416 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=2x1 p=2 b=64
+median=0.313849 average time=0.314168
+min=0.313417 max=0.316669
+rate=6.8424 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=4x1 p=4 b=64
+median=0.15691 average time=0.157099
+min=0.156713 max=0.15831
+rate=13.6861 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=8x1 p=8 b=64
+median=0.0786225 average time=0.078655
+min=0.0784951 max=0.0788765
+rate=27.3139 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=12x1 p=12 b=64
+median=0.055703 average time=0.0556684
+min=0.0552466 max=0.0560666
+rate=38.5524 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=18x1 p=18 b=64
+median=0.0447374 average time=0.0447185
+min=0.0445529 max=0.0449242
+rate=48.002 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=1024 K=1024 N=1024
+grid=36x1 p=36 b=64
+median=0.027669 average time=0.027655
+min=0.02752 max=0.0278056
+rate=77.6135 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=1x1 p=1 b=64
+median=5.10864 average time=5.1084
+min=5.09957 max=5.13134
+rate=3.36291 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=2x1 p=2 b=64
+median=2.56359 average time=2.5643
+min=2.56233 max=2.57138
+rate=6.7015 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=4x1 p=4 b=64
+median=1.27884 average time=1.2792
+min=1.27752 max=1.28167
+rate=13.4339 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=8x1 p=8 b=64
+median=0.643718 average time=0.643164
+min=0.640497 max=0.646224
+rate=26.6885 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=12x1 p=12 b=64
+median=0.448752 average time=0.449416
+min=0.448054 max=0.453534
+rate=38.2836 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=18x1 p=18 b=64
+median=0.319625 average time=0.320489
+min=0.319079 max=0.324618
+rate=53.7501 GFLOP/s
+---------------------------------------------------
+A generated
+B generated
+C generated
+---------------------------------------------------
+M=2048 K=2048 N=2048
+grid=36x1 p=36 b=64
+median=0.233498 average time=0.23495
+min=0.232839 max=0.238214
+rate=73.5762 GFLOP/s
+---------------------------------------------------
