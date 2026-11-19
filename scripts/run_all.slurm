@@ -1,91 +1,105 @@
 #!/bin/bash
-#SBATCH --job-name=a2_mm
-#SBATCH --nodes=1
+#SBATCH --partition=Centaurus
+#SBATCH --time=02:00:00
+#SBATCH --exclusive
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=36
-#SBATCH --exclusive
-#SBATCH --time=02:00:00
-#SBATCH --output=a2_%j.out
-##SBATCH --partition=FILL_ME_IN      # copy the partition line from your Assignment 1 script, remove one '#'
+#SBATCH --job-name=a2_mm
+#SBATCH --nodes=1
 
-# ITCS 4145 Assignment 2: every measurement of Part A and Part B in one job.
-# Submit from the project root:   sbatch scripts/run_all.slurm
-# Build both programs on the cluster first (g++ -O2 -pthread / g++ -O2 -fopenmp).
+lscpu
+g++ --version
 
-# ---- edit these two paths to match your layout ----
-A=${A:-./src/partA/mm_a}        # Part A binary (pthreads)
-B=${B:-./src/partB/mm_b}        # Part B binary (OpenMP)
-# ---------------------------------------------------
-OUT=${OUT:-data}
-BIG=${BIG:-2048}                # overridable only so the script can be dry-run on small sizes
-SMALL=${SMALL:-1024}
+g++ -O2 -pthread -o out_a src/partA.cpp
+g++ -O2 -fopenmp -o out_b src/partB.cpp
 
-for bin in "$A" "$B"; do
-    [ -x "$bin" ] || { echo "ERROR: binary not found or not executable: $bin"; exit 1; }
-done
-mkdir -p "$OUT"
+# Part A
+./out_a 1024 1024 1024 0 0 0
+./out_a 2048 2048 2048 0 0 0
+./out_a 2048 2048 2048 0 0 16
+./out_a 2048 2048 2048 0 0 32
+./out_a 2048 2048 2048 0 0 64
+./out_a 2048 2048 2048 0 0 128
+./out_a 2048 2048 2048 0 0 256
 
-# Required for Part B (ignored by the pthreads program)
+# item 2 in Part A
+./out_a 1024 1024 1024 1 1 0
+./out_a 1024 1024 1024 2 1 0
+./out_a 1024 1024 1024 4 1 0
+./out_a 1024 1024 1024 8 1 0
+./out_a 1024 1024 1024 12 1 0
+./out_a 1024 1024 1024 18 1 0
+./out_a 1024 1024 1024 36 1 0
+
+./out_a 2048 2048 2048 1 1 0
+./out_a 2048 2048 2048 2 1 0
+./out_a 2048 2048 2048 4 1 0
+./out_a 2048 2048 2048 8 1 0
+./out_a 2048 2048 2048 12 1 0
+./out_a 2048 2048 2048 18 1 0
+./out_a 2048 2048 2048 36 1 0
+
+# item 3
+./out_a 1024 1024 1024 1 2 64
+./out_a 1024 1024 1024 2 2 64
+./out_a 1024 1024 1024 2 4 64
+./out_a 1024 1024 1024 3 4 64
+./out_a 1024 1024 1024 3 6 64
+./out_a 1024 1024 1024 6 6 64
+
+./out_a 2048 2048 2048 1 2 64
+./out_a 2048 2048 2048 2 2 64
+./out_a 2048 2048 2048 2 4 64
+./out_a 2048 2048 2048 3 4 64
+./out_a 2048 2048 2048 3 6 64
+./out_a 2048 2048 2048 6 6 64
+./out_a 2048 2048 2048 1 36 64
+
+# item 4
+./out_a 1000 1024 1536 6 6 64
+
+# part B
 export OMP_PROC_BIND=true
 export OMP_PLACES=cores
 
-# Node type and compiler version, both required in the report
-{ date; hostname; g++ --version | head -1; lscpu; } > "$OUT/node_info.txt" 2>&1
+./out_b 1024 1024 1024 0 0 0
+./out_b 1024 1024 1024 0 0 64
+./out_b 2048 2048 2048 0 0 0
+./out_b 2048 2048 2048 0 0 64
 
-# run <binary> <output file> M K N pr pc b
-run() {
-    local bin=$1 out=$2; shift 2
-    echo "### $bin $*" >> "$out"
-    "$bin" "$@" >> "$out" 2>&1 || echo "### FAILED (exit $?): $bin $*" | tee -a "$out"
-}
+# item 2
+./out_b 1024 1024 1024 1 1 0
+./out_b 1024 1024 1024 2 1 0
+./out_b 1024 1024 1024 4 1 0
+./out_b 1024 1024 1024 8 1 0
+./out_b 1024 1024 1024 12 1 0
+./out_b 1024 1024 1024 18 1 0
+./out_b 1024 1024 1024 36 1 0
 
-# ---------- Part A, item 1: tile sweep (sequential) ----------
-for b in 0 16 32 64 128 256; do
-    run "$A" "$OUT/A1_tile_sweep.txt" $BIG $BIG $BIG 0 0 $b
-done
-run "$A" "$OUT/A1_tile_sweep.txt" $SMALL $SMALL $SMALL 0 0 0
+./out_b 2048 2048 2048 1 1 0
+./out_b 2048 2048 2048 2 1 0
+./out_b 2048 2048 2048 4 1 0
+./out_b 2048 2048 2048 8 1 0
+./out_b 2048 2048 2048 12 1 0
+./out_b 2048 2048 2048 18 1 0
+./out_b 2048 2048 2048 36 1 0
 
-# b* = tile size (b > 0) with the smallest median at the big size
-BSTAR=$(awk -F'[= ]' -v big="$BIG" '
-    /^M=/      { m = $2 }
-    /^grid=/   { b = $NF }
-    /^median=/ { if (m == big && b > 0 && (best == "" || $2 + 0 < best + 0)) { best = $2; bs = b } }
-    END        { print bs }' "$OUT/A1_tile_sweep.txt")
-[ -n "$BSTAR" ] || { echo "ERROR: could not determine b* from $OUT/A1_tile_sweep.txt"; exit 1; }
-echo "b* = $BSTAR" | tee "$OUT/bstar.txt"
+# item 3
+./out_b 1024 1024 1024 1 2 64
+./out_b 1024 1024 1024 2 2 64
+./out_b 1024 1024 1024 2 4 64
+./out_b 1024 1024 1024 3 4 64
+./out_b 1024 1024 1024 3 6 64
+./out_b 1024 1024 1024 6 6 64
 
-# ---------- Part B: its own sequential baselines ----------
-for s in $SMALL $BIG; do
-    for b in 0 $BSTAR; do
-        run "$B" "$OUT/B0_baselines.txt" $s $s $s 0 0 $b
-    done
-done
+./out_b 2048 2048 2048 1 2 64
+./out_b 2048 2048 2048 2 2 64
+./out_b 2048 2048 2048 2 4 64
+./out_b 2048 2048 2048 3 4 64
+./out_b 2048 2048 2048 3 6 64
+./out_b 2048 2048 2048 6 6 64
 
-# ---------- Items 2 to 4, identical for both parts ----------
-for part in A B; do
-    if [ $part = A ]; then bin=$A; else bin=$B; fi
+./out_b 2048 2048 2048 1 36 64
 
-    # item 2: one-dimensional partition (grid p x 1), b = 0 and b = b*
-    for s in $SMALL $BIG; do
-        for p in 1 2 4 8 12 18 36; do
-            for b in 0 $BSTAR; do
-                run "$bin" "$OUT/${part}2_1d.txt" $s $s $s $p 1 $b
-            done
-        done
-    done
-
-    # item 3: two-dimensional partition, square grids, b = b*
-    for s in $SMALL $BIG; do
-        for g in 1x2 2x2 2x4 3x4 3x6 6x6; do
-            run "$bin" "$OUT/${part}3_2d.txt" $s $s $s ${g%x*} ${g#*x} $BSTAR
-        done
-    done
-    run "$bin" "$OUT/${part}3_2d.txt" $BIG $BIG $BIG 1 36 $BSTAR      # column grid at p = 36
-
-    # item 4: non-divisible dimensions
-    run "$bin" "$OUT/${part}4_nondivisible.txt" 1000 1024 1536 6 6 $BSTAR
-done
-
-echo "runs recorded: $(cat "$OUT"/[AB][0-9]_*.txt | grep -c '^### \./\|^### /')"
-echo "runs failed:   $(cat "$OUT"/[AB][0-9]_*.txt | grep -c '^### FAILED')"
-date
+# item 4
+./out_b 1000 1024 1536 6 6 64
